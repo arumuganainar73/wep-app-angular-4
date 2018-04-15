@@ -1,0 +1,16 @@
+<h2>{{ country.country | uppercase }} Details</h2>
+<label>Source of data:</label>
+<label class="form-check-inline">
+    <input class="form-check-input" type="radio" name="mode" [value]="true" [(ngModel)]="testmode" (click)="onChangeMode('test')">
+</label>
+<label class="form-check-inline">
+    <input class="form-check-input" type="radio" name="mode" [value]="false" [(ngModel)]="servermode" (click)="onChangeMode('server')">
+</label>
+<div>
+	<label>Country:
+      <input [(ngModel)]="country.country" placeholder="country" (ngModelChange)="onChangeCountry($event)">
+    </label>
+	<label>The Average:<div *ngIf="country.score" class="horiz-bar" [ngStyle]="{'width': country.score}">&nbsp;</div>
+       </label>
+
+</div>

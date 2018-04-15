@@ -1,0 +1,6 @@
+.horiz-bar {
+    display: inline-block;
+    background-color: blue;
+    border-style: solid;
+    border-color: black;
+}
